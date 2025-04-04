@@ -5,6 +5,9 @@
   --white: #fff;
   --gray: #c1c2c1;
 }
+.d-flex{
+    display: flex;
+}
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +90,6 @@ ol {
   z-index: 999;
   border-radius: 30px;
   margin-bottom: 40px;
-
 }
 
 form {
@@ -116,6 +118,7 @@ select {
   border-radius: 25px;
   font-size: 16px;
   margin-top: 20px;
+  outline: none;
 }
 
 button {
@@ -136,4 +139,202 @@ button:hover {
   border-color: transparent;
   background-color: #63ab45;
   color: var(--white);
+}
+
+/* Adventure */
+
+.btn-primary {
+  color: var(--green);
+  background: rgba(99, 171, 69, 0.1);
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.adventure {
+  padding: 40px;
+}
+.adventure-title {
+  text-align: center;
+}
+.adventure-title h2 {
+  padding: 20px 0;
+  font-size: 40px;
+  letter-spacing: 0.03em;
+  color: var(--green-dark);
+}
+.adventure-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 60px;
+}
+
+.img-holder {
+  overflow: hidden;
+}
+.single-features-item-two {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+.img-holder img {
+  transition: all 0.3s ease-in-out;
+}
+
+.img-holder img:hover {
+  transform: scale(1.4);
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999999;
+  padding: 40px 30px 35px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 43.14%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: var(--white);
+  font-size: 24px;
+}
+
+.whosection {
+  padding: 50px 0 0 0;
+}
+.whoinner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+.whoitems {
+  display: flex;
+  align-items: center;
+}
+.whoimg {
+  width: 100%;
+  height: 100%;
+}
+.whoimg img {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  width: 100%;
+  object-fit: cover;
+}
+.whocontent h2 {
+  font-size: 45px;
+  color: var(--green-dark);
+  max-width: 540px;
+  padding: 30px 0;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 58px;
+}
+.whocontent p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 27px;
+  color: var(--green-dark);
+}
+@keyframes growProgressBar {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+.pro {
+  border-right: 1px solid var(--gray);
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.progre {
+  display: inline-flex;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: #369;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  /* width: var(--size); */
+  /* height: var(--size); */
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--green) calc(var(--pgPercentage) * 1%), whitesmoke 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--green-dark);
+  width: 130px;
+  height: 130px;
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.about-item {
+  display: flex;
+  align-items: center;
+
+}
+
+.content-about h2 {
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 0.04em;
+  padding: 20px 0;
+}
+.content-about p {
+  font-size: 16px;
+  color: var(--green-dark);
+  font-weight: 200;
+  line-height: 30px;
+  max-width: 600px;
+}
+
+.about-elementur {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  width: auto;
+  display: inline-block;
+  padding: 16px 30px 16px 30px;
+  margin: 20px 10px;
+  --e-transform-rotateZ: -8deg;
+  border-radius: 10px;
+  transform: perspective(var(--e-transform-perspective, 0))
+    rotate(var(--e-transform-rotateZ, 0));
+  z-index: 0;
+}
+.ri-check {
+    color: orangered;
 }
