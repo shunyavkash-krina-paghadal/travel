@@ -1,0 +1,50 @@
+/* Xl */
+@media (max-width: 1399px) {
+}
+
+/* Lg */
+@media (max-width: 1199px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+}
+/* Md */
+@media (max-width: 991px) {
+  header nav {
+    display: none;
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+/* Sm */
+@media (max-width: 767px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+/* Xs */
+@media (max-width: 575px) {
+  .hero-main-heading {
+    font-size: 51px;
+    line-height: 60px;
+    text-align: left;
+  }
+  .hero-content {
+    padding: 250px 0;
+    align-items: flex-start;
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+}
