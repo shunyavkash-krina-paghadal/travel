@@ -17,3 +17,34 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
+// slider
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {},
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+   575: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    991: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    1424: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+});

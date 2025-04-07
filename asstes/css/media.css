@@ -26,6 +26,12 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
+  .team-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 40px 0;
+    gap: 20px;
+  }
 }
 
 /* Sm */
@@ -46,7 +52,7 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 60px;
   }
-    .about-inner {
+  .about-inner {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 60px;
@@ -59,6 +65,12 @@
     font-size: 51px;
     line-height: 60px;
     text-align: left;
+  }
+  .team-inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 40px 0;
+    gap: 20px;
   }
   .hero-content {
     padding: 250px 0;
